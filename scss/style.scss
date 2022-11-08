@@ -1,0 +1,20 @@
+@mixin border-theme ($main-color: green, $main-style: solid, $main-width: 1px) {
+    border-color: $main-color;
+    border-style: $main-style;
+    border-width: $main-width;
+}
+
+//wartości domyślne
+div {
+    @include border-theme;
+}
+
+//zmieniony tylko kolor obramowania
+p {
+    @include border-theme(red);
+}
+
+//zmienione wszystkie parametry obramowania
+p {
+    @include border-theme(pink, dotted, 3px)
+}
